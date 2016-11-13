@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SecretAgent.h"
 
 @interface AgentsTableViewController : UITableViewController
+
+@property (nonatomic) SecretAgent *secretAgent;
 
 @end

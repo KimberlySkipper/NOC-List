@@ -15,6 +15,7 @@
 		2CC954731DD5207500DE3136 /* AgentsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC954721DD5207500DE3136 /* AgentsTableViewController.m */; };
 		2CC954761DD520D100DE3136 /* SecretAgent.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CC954751DD520D100DE3136 /* SecretAgent.m */; };
 		2CC954781DD6160100DE3136 /* NOC.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CC954771DD6160100DE3136 /* NOC.json */; };
+		2CE66DAB1DD800A800B70390 /* SecretAgentDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2CE66DAA1DD800A800B70390 /* SecretAgentDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		2CC954741DD520D100DE3136 /* SecretAgent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SecretAgent.h; path = ../SecretAgent.h; sourceTree = "<group>"; };
 		2CC954751DD520D100DE3136 /* SecretAgent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SecretAgent.m; path = ../SecretAgent.m; sourceTree = "<group>"; };
 		2CC954771DD6160100DE3136 /* NOC.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = NOC.json; sourceTree = "<group>"; };
+		2CE66DA91DD800A800B70390 /* SecretAgentDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecretAgentDetailViewController.h; sourceTree = "<group>"; };
+		2CE66DAA1DD800A800B70390 /* SecretAgentDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecretAgentDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +74,8 @@
 				2CC9545D1DD4E1D500DE3136 /* AppDelegate.h */,
 				2CC9545E1DD4E1D500DE3136 /* AppDelegate.m */,
 				2CC954631DD4E1D500DE3136 /* Main.storyboard */,
+				2CE66DA91DD800A800B70390 /* SecretAgentDetailViewController.h */,
+				2CE66DAA1DD800A800B70390 /* SecretAgentDetailViewController.m */,
 				2CC954661DD4E1D500DE3136 /* Assets.xcassets */,
 				2CC954681DD4E1D500DE3136 /* LaunchScreen.storyboard */,
 				2CC9546B1DD4E1D500DE3136 /* Info.plist */,
@@ -163,6 +168,7 @@
 				2CC954731DD5207500DE3136 /* AgentsTableViewController.m in Sources */,
 				2CC954761DD520D100DE3136 /* SecretAgent.m in Sources */,
 				2CC9545C1DD4E1D500DE3136 /* main.m in Sources */,
+				2CE66DAB1DD800A800B70390 /* SecretAgentDetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

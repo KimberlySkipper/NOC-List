@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Agents Table View Controller-->
+        <!--Secret Agents-->
         <scene sceneID="GUW-wR-r3z">
             <objects>
                 <tableViewController id="7q2-ef-YBF" customClass="AgentsTableViewController" sceneMemberID="viewController">
@@ -26,7 +26,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sEx-Xk-KXC">
-                                            <rect key="frame" x="15" y="12" width="33.5" height="20.5"/>
+                                            <rect key="frame" x="15" y="11" width="33.5" height="21.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,7 +34,7 @@
                                             <color key="shadowColor" red="0.73940740240000002" green="0.74672826780000001" blue="0.74672826780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7av-aN-Ueq">
-                                            <rect key="frame" x="296" y="12" width="44" height="20.5"/>
+                                            <rect key="frame" x="296" y="11" width="44" height="20.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -43,7 +43,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="hhI-fu-s8s" kind="show" id="lH3-2g-6AF"/>
+                                    <segue destination="hhI-fu-s8s" kind="show" identifier="SecretAgentDetailSegue" id="lH3-2g-6AF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -52,16 +52,16 @@
                             <outlet property="delegate" destination="7q2-ef-YBF" id="1Rk-2f-5ko"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="BOC-ZV-mva"/>
+                    <navigationItem key="navigationItem" title="Secret Agents" id="BOC-ZV-mva"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eRK-dP-7bS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-257" y="87"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Security Clearance-->
         <scene sceneID="ca4-CX-xNl">
             <objects>
-                <viewController id="hhI-fu-s8s" customClass="DetailViewController" sceneMemberID="viewController">
+                <viewController id="hhI-fu-s8s" customClass="SecretAgentDetailViewController" colorLabel="IBBuiltInLabel-Red" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aq0-wo-UAH"/>
                         <viewControllerLayoutGuide type="bottom" id="Cto-zM-ze8"/>
@@ -83,12 +83,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wMv-li-TzA">
-                                <rect key="frame" x="160.5" y="323.5" width="54.5" height="20.5"/>
+                                <rect key="frame" x="153" y="321" width="70.5" height="26.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Level #" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g1m-rx-yKl">
-                                        <rect key="frame" x="0.0" y="0.0" width="54.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="70.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -104,7 +104,12 @@
                             <constraint firstItem="wMv-li-TzA" firstAttribute="centerX" secondItem="xcK-d4-3lP" secondAttribute="centerX" id="lIT-jM-D3q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="j2K-ho-oyv"/>
+                    <navigationItem key="navigationItem" title="Security Clearance" id="j2K-ho-oyv"/>
+                    <connections>
+                        <outlet property="accessLevelLabel" destination="g1m-rx-yKl" id="nLL-ni-Gfi"/>
+                        <outlet property="coverNameLabel" destination="msu-Mq-vgh" id="Qgk-8A-PSJ"/>
+                        <outlet property="realNameLabel" destination="OEt-yk-85z" id="oEU-2Z-OdC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2xm-Ic-BFA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -115,7 +120,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jim-WL-RvV" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ltg-tM-eJ8">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="ltg-tM-eJ8">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
